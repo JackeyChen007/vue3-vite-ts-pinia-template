@@ -14,10 +14,8 @@ vue3-vite-ts-pinia-template 是一个免费开源的中后台模版。使用了�
 
 ```shell
 ├── doc # 项目文档
-│   ├── config # 配置文件
-│   ├── generate # 生成器
-│   ├── script # 脚本
-│   └── vite # vite配置
+│   ├── img # 图片
+│   └── Markdown # 文档说明
 ├── public # 公共静态资源目录
 ├── src # 主目录
 │   ├── api # 接口文件
@@ -81,3 +79,10 @@ npm run build
 ```shell
 npm run preview
 ```
+
+## vite 插件
+本项目已使用以下插件
+
+-  [unplugin-auto-import](https://github.com/unplugin/unplugin-auto-import) - 解决 `import { ref , reactive ..... } from 'vue'` 大量引入的问题
+-  [unplugin-vue-components](https://github.com/unplugin/unplugin-vue-components?tab=readme-ov-file#unplugin-vue-components) - 用于自动导入自定义组件
+-  [vite-plugin-svg-icons](https://github.com/vbenjs/vite-plugin-svg-icons) - 用于生成 svg 图片
