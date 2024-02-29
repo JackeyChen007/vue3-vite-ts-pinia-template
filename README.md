@@ -1,46 +1,83 @@
 # vue3-vite-ts-pinia-template
 
-This template should help get you started developing with Vue 3 in Vite.
+## 简介
 
-## Recommended IDE Setup
+Vue Vben Admin 是一个免费开源的中后台模版。使用了最新的`vue3`,`vite4`,`TypeScript`等主流技术开发，开箱即用的中后台前端解决方案，也可用于学习参考。
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+## 特性
 
-## Type Support for `.vue` Imports in TS
+- **最新技术栈**：使用 Vue3/vite4 等前端前沿技术开发
+- **TypeScript**: 应用程序级 JavaScript 的语言
+- **组件** 二次封装了多个常用的组件
 
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
+## 目录说明
 
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
+```shell
+├── doc # 项目文档
+│   ├── config # 配置文件
+│   ├── generate # 生成器
+│   ├── script # 脚本
+│   └── vite # vite配置
+├── public # 公共静态资源目录
+├── src # 主目录
+│   ├── api # 接口文件
+│   ├── assets # 资源文件
+│   │   ├── icons # icon sprite 图标文件夹
+│   │   ├── images # 项目存放图片的文件夹
+│   │   └── svg # 项目存放svg图片的文件夹
+│   ├── components # 公共组件
+│   ├── composables # 组合式函数
+│   │   ├── modules # 所有函数模块
+│   │   └── index # 主入口
+│   ├── icons # 图标文件夹
+│   │   └── svg # 项目存放svg图片的文件夹
+│   ├── layout # 布局文件
+│   │   ├── components # 布局组件
+│   │   └── index # 页面布局
+│   ├── router # 路由配置
+│   ├── store # 数据仓库
+│   │   ├── modules # 所有仓库模块
+│   │   └── index # 主入口
+│   ├── styles # 全局样式
+│   ├── types # ts类型声明文件
+│   ├── utils # 工具类
+│   ├── views # 页面
+│   └── main.ts # 主入口
+├── .env.dev # 开发环境
+├── .env.prod # 生产环境
+└── vite.config.ts # vite配置文件
+```
 
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
+## 安装使用
 
-## Customize configuration
+- 获取项目代码
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+```shell
+git clone https://github.com/JackeyChen007/vue3-vite-ts-pinia-template.git
+```
 
-## Project Setup
+- 安装依赖
 
-```sh
+```shell
+cd vue3-vite-ts-pinia-template
+
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+- 运行开发环境
 
-```sh
+```shell
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+- 打包生产环境
 
-```sh
-npm run build
+```shell
+npm run build:prod
 ```
 
-### Lint with [ESLint](https://eslint.org/)
+-  预览生产环境
 
-```sh
-npm run lint
+```shell
+npm run preview
 ```
