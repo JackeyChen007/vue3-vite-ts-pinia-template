@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "vite --mode dev",
     "prod": "vite --mode prod",
-    "build:prod": "vue-tsc --noEmit && vite build --mode prod",
+    "build": "vue-tsc --noEmit && vite build --mode prod",
     "preview": "vite preview --port 8080 --mode prod",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",

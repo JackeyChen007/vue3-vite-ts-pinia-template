@@ -73,7 +73,7 @@ npm run dev
 - 打包生产环境
 
 ```shell
-npm run build:prod
+npm run build
 ```
 
 -  预览生产环境
