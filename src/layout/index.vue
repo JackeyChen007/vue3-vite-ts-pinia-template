@@ -15,9 +15,9 @@ const { counter: counterNumber } = storeToRefs(user)
       {{ $store.user.counter }}
       {{ $store.user.doubleCounter }}
       <button @click="user.increment">+1</button>
-      {{ $fetch.user.counter }}
-      {{ $fetch.user.doubleCounter }}
-      <button @click="$fetch.user.increment">+1</button>
+      {{ $comp.user.counter }}
+      {{ $comp.user.doubleCounter }}
+      <button @click="$comp.user.increment">+1</button>
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About </RouterLink>

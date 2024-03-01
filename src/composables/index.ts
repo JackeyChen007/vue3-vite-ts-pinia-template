@@ -1,9 +1,9 @@
 import { useUser } from './modules/user'
 import { useSetting } from './modules/settings'
 
-const useFetch = () => ({
+const useComp = () => ({
   user: useUser(),
   setting: useSetting(),
 })
 
-export default useFetch
+export default useComp

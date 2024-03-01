@@ -23,8 +23,8 @@ import useStore from '@/store'
 app.config.globalProperties.$store = useStore()
 
 //****** ↓↓↓ 配置全局composables ↓↓↓ ******
-import useFetch from '@/composables'
-app.config.globalProperties.$fetch = useFetch()
+import useComp from '@/composables'
+app.config.globalProperties.$comp = useComp()
 
 //****** ↓↓↓ 配置全局api ↓↓↓ ******
 import api from '@/api'

@@ -23,11 +23,11 @@ interface ImportGlobEagerFunction {
 
 //全局组件实例访问到的全局属性的对象。
 import { Store } from '@/store'
-import { Fetch } from '@/composables'
+import { Comp } from '@/composables'
 declare module '@vue/runtime-core' {
   interface ComponentCustomProperties {
     $store: Store
-    $fetch: Fetch
+    $comp: Comp
   }
 }
 
