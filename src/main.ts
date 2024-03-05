@@ -4,15 +4,18 @@ import App from './App.vue'
 const app = createApp(App)
 
 //****** ↓↓↓ 全局样式 ↓↓↓ ******
-import './assets/main.css'
 import './styles/index.scss'
+import 'amfe-flexible'
 
 //****** ↓↓↓ 注册svg脚本 ↓↓↓ ******
 import 'virtual:svg-icons-register'
 
-//****** ↓↓↓ 路由 ↓↓↓ ******
-import router from './router'
+//****** ↓↓↓ 配置路由 ↓↓↓ ******
+import router from './router/routers'
 app.use(router)
+
+//****** ↓↓↓ 路由守卫 ↓↓↓ ******
+// import '@/router/guard'
 
 //****** ↓↓↓ pinia ↓↓↓ ******
 import { createPinia } from 'pinia'

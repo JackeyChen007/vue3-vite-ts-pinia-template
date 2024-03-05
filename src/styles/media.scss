@@ -1,0 +1,17 @@
+/* 在屏幕宽度大于600px时的样式 */
+@media screen and (min-width: 600Px) {
+  #app {
+    width: 600Px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: $dark_main_color;
+  }
+  .van-tabbar {
+    width: 600Px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+  body{
+    background-color: $dark_table_th_bgcolor !important;
+  }
+}

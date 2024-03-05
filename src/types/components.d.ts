@@ -8,6 +8,7 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     HelloWorld: typeof import('./../components/HelloWorld.vue')['default']
+    Hotel: typeof import('./../components/hotel/index.vue')['default']
     IconCommunity: typeof import('./../components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./../components/icons/IconDocumentation.vue')['default']
     IconEcosystem: typeof import('./../components/icons/IconEcosystem.vue')['default']
@@ -17,6 +18,9 @@ declare module 'vue' {
     RouterView: typeof import('vue-router')['RouterView']
     SvgIcon: typeof import('./../components/svgIcon/index.vue')['default']
     TheWelcome: typeof import('./../components/TheWelcome.vue')['default']
+    VanButton: typeof import('vant/es')['Button']
+    VanTabbar: typeof import('vant/es')['Tabbar']
+    VanTabbarItem: typeof import('vant/es')['TabbarItem']
     WelcomeItem: typeof import('./../components/WelcomeItem.vue')['default']
   }
 }

@@ -1,4 +1,6 @@
 import { defineStore } from 'pinia'
+import { localStorage } from '@/utils/storage'
+
 
 const useUserStore = defineStore('user', () => {
   const counter = ref(0)
@@ -6,7 +8,12 @@ const useUserStore = defineStore('user', () => {
   const increment = () => {
     counter.value++
   }
-  return { counter, doubleCounter, increment }
+
+  const tokenValue: string = localStorage.get('tokenValue') || ''
+  const roleCodeList = () => {}
+  const getUserInfo = () => {}
+  const resetToken = () => {}
+  return { counter, doubleCounter, increment, tokenValue, roleCodeList, getUserInfo, resetToken }
 })
 
 export default useUserStore

@@ -3,7 +3,9 @@ import { defineConfig, loadEnv } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
+import { VantResolver } from '@vant/auto-import-resolver'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import postCssPxToRem from 'postcss-pxtorem'
 import path from 'path'
 
 // https://vitejs.dev/config/
@@ -23,6 +25,7 @@ export default defineConfig(({ mode }) => {
         dirs: ['src/components/'],
         extensions: ['vue'],
         dts: 'src/types/components.d.ts',
+        resolvers: [VantResolver()],
       }),
       //svg
       createSvgIconsPlugin({
@@ -45,6 +48,14 @@ export default defineConfig(({ mode }) => {
           // 引入 index.scss 这样就可以在全局中使用 index.scss中预定义的变量了
           additionalData: '@import "@/styles/app-theme.scss";',
         },
+      },
+      postcss: {
+        plugins: [
+          postCssPxToRem({
+            rootValue: 37.5,
+            propList: ['*'],
+          }),
+        ],
       },
     },
     server: {
