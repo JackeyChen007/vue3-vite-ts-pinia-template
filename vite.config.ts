@@ -11,6 +11,7 @@ export default defineConfig(({ mode }) => {
   // 获取`.env`环境配置文件
   const env = loadEnv(mode, process.cwd())
   return {
+    base: './',
     plugins: [
       vue(),
       // 解决 `import { ref , reactive ..... } from 'vue'` 大量引入的问题
