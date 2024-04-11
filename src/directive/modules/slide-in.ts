@@ -37,6 +37,7 @@ function isBelowViewport(el: HTMLElement) {
 }
 
 export default {
+  //可自定义动画持续时间
   mounted(el: HTMLElement, binding: DirectiveBinding) {
     if (!isBelowViewport(el)) return
 
@@ -52,7 +53,7 @@ export default {
         },
       ],
       {
-        duration: binding.arg || DURATION,
+        duration: binding.value || DURATION,
         easing: 'ease',
       },
     )

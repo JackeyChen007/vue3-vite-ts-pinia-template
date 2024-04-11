@@ -31,11 +31,9 @@ import api from '@/api'
 app.config.globalProperties.$api = api
 
 //****** ↓↓↓ 注册自定义指令 ↓↓↓ ******
-import directive from '@/directive'
-for (const key in directive) {
-  if (directive.hasOwnProperty(key)) {
-    app.directive(key, directive[key])
-  }
+import directives from '@/directive'
+for (const key in directives) {
+  if (directives.hasOwnProperty(key)) app.directive(key, directives[key])
 }
 
 app.mount('#app')

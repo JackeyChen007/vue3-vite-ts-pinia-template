@@ -1,7 +1,7 @@
 <template>
   <div class="about">
     <h1>实现元素平滑上升指令</h1>
-    <div v-slide-in class="box" v-for="i in 20">{{ i }}</div>
+    <div v-slide-in="1000" class="box" v-for="i in 20">{{ i }}</div>
   </div>
 </template>
 
