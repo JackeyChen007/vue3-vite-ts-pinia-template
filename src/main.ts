@@ -30,4 +30,12 @@ app.config.globalProperties.$comp = useComp()
 import api from '@/api'
 app.config.globalProperties.$api = api
 
+//****** ↓↓↓ 注册自定义指令 ↓↓↓ ******
+import directive from '@/directive'
+for (const key in directive) {
+  if (directive.hasOwnProperty(key)) {
+    app.directive(key, directive[key])
+  }
+}
+
 app.mount('#app')
