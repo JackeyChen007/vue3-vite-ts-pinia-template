@@ -1,5 +1,5 @@
-import axios from 'axios';
-import store from '@/store';
+import axios from 'axios'
+import store from '@/store'
 // import { ElMessage, ElMessageBox } from 'element-plus';
 // import { localStorage } from '@/utils/storage';
 
@@ -8,7 +8,7 @@ const service = axios.create({
   baseURL: import.meta.env.VITE_APP_BASE_API,
   timeout: 50000, // 请求超时时间：50s
   headers: { 'Content-Type': 'application/json;charset=utf-8' },
-});
+})
 
 // 请求拦截器
 service.interceptors.request.use(
@@ -27,12 +27,12 @@ service.interceptors.request.use(
     //   // 微信公众号appId
     //   config.headers['appId'] = localStorage.get('appId');
     // }
-    return config;
+    return config
   },
   (error) => {
-    return Promise.reject(error);
+    return Promise.reject(error)
   },
-);
+)
 
 // 响应拦截器
 service.interceptors.response.use(
@@ -71,7 +71,7 @@ service.interceptors.response.use(
     //   return Promise.reject(new Error(msg || 'Error'));
     // }
   },
-);
+)
 
 // 统一处理请求响应异常
 function handleError() {
@@ -88,4 +88,4 @@ function handleError() {
 }
 
 // 导出实例
-export default service;
+export default service

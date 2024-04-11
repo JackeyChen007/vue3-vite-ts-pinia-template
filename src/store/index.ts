@@ -1,5 +1,5 @@
-import  useUserStore  from './modules/user'
-import  useSettingStore  from './modules/settings'
+import useUserStore from './modules/user'
+import useSettingStore from './modules/settings'
 
 const useStore = () => ({
   user: useUserStore(),

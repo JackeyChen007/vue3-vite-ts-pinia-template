@@ -30,5 +30,3 @@ declare module '@vue/runtime-core' {
     $comp: Comp
   }
 }
-
-

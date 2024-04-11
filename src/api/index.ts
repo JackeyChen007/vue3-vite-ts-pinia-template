@@ -1,5 +1,5 @@
 // 拿到所有api
-const modulesFiles = import.meta.glob('./*/*.*')
+const modulesFiles = import.meta.glob('./*/*.*', { eager: true, import: 'default' })
 const modules: any = {}
 for (const key in modulesFiles) {
   const moduleName = key.replace(/(.*\/)*([^.]+).*/gi, '$2')
@@ -12,6 +12,4 @@ for (const key in modulesFiles) {
     modules[moduleName] = value
   }
 }
-// console.log(666, modules);
 export default modules
-

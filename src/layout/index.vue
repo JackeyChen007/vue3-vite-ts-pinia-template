@@ -9,7 +9,7 @@ const { counter: counterNumber } = storeToRefs(user)
     <img alt="Vue logo" class="logo" src="@/assets/logo.svg" width="125" height="125" />
     <div class="wrapper">
       <HelloWorld msg="You did it!" />
-      <SvgIcon name="baidu" color="black" ></SvgIcon>
+      <SvgIcon name="baidu" color="black"></SvgIcon>
       {{ counterNumber }}
       {{ user.counter }}
       {{ $store.user.counter }}
@@ -29,7 +29,6 @@ const { counter: counterNumber } = storeToRefs(user)
 </template>
 
 <style lang="scss" scoped>
-
 header {
   line-height: 1.5;
   max-height: 100vh;

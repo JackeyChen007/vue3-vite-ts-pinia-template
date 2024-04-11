@@ -1,7 +1,3 @@
-
-
 export function useSetting() {
-
-
-  return {};
+  return {}
 }
