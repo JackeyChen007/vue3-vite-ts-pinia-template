@@ -7,6 +7,9 @@ export {}
 
 declare module 'vue' {
   export interface GlobalComponents {
+    AppFooter: typeof import('./../components/AppFooter/index.vue')['default']
+    AppHeader: typeof import('./../components/AppHeader/index.vue')['default']
+    copy: typeof import('./../components/AppHeader copy/index.vue')['default']
     HelloWorld: typeof import('./../components/HelloWorld.vue')['default']
     IconCommunity: typeof import('./../components/icons/IconCommunity.vue')['default']
     IconDocumentation: typeof import('./../components/icons/IconDocumentation.vue')['default']
@@ -15,7 +18,7 @@ declare module 'vue' {
     IconTooling: typeof import('./../components/icons/IconTooling.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SvgIcon: typeof import('./../components/svgIcon/index.vue')['default']
+    SvgIcon: typeof import('./../components/SvgIcon/index.vue')['default']
     TheWelcome: typeof import('./../components/TheWelcome.vue')['default']
     VanButton: (typeof import('vant/es'))['Button']
     VanTabbar: (typeof import('vant/es'))['Tabbar']

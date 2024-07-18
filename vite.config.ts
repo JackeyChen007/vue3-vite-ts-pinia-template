@@ -4,6 +4,7 @@ import vue from '@vitejs/plugin-vue'
 import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 import { createSvgIconsPlugin } from 'vite-plugin-svg-icons'
+import UnoCSS from 'unocss/vite'
 import path from 'path'
 
 // https://vitejs.dev/config/
@@ -27,10 +28,11 @@ export default defineConfig(({ mode }) => {
       }),
       //svg
       createSvgIconsPlugin({
-        iconDirs: [path.resolve(process.cwd(), 'src/icons/svg')],
+        iconDirs: [path.resolve(process.cwd(), 'src/assets/svg')],
         symbolId: 'icon-[dir]-[name]',
         customDomId: '__svg__icons__dom__',
       }),
+      UnoCSS(),
     ],
     resolve: {
       // 配置路径别名

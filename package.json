@@ -4,10 +4,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "dev": "set NODE_ENV=development && vite --mode development",
-    "prod": "set NODE_ENV=production && vite --mode production",
-    "build": "set NODE_ENV=production && vue-tsc --noEmit && vite build --mode production",
-    "preview": "set NODE_ENV=production && vite preview --port 8080 --mode production",
+    "dev": "vite --mode development",
+    "prod": "vite --mode production",
+    "build": "vue-tsc --noEmit && vite build --mode production",
+    "preview": "vite preview --port 8080 --mode production",
     "type-check": "vue-tsc --build --force",
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts,.mts --fix --ignore-path .gitignore",
     "format": "prettier --write src/"
@@ -36,6 +36,7 @@
     "prettier": "^3.2.5",
     "sass": "^1.71.1",
     "typescript": "~5.3.0",
+    "unocss": "^0.61.5",
     "unplugin-auto-import": "^0.17.5",
     "unplugin-vue-components": "^0.26.0",
     "vite": "^5.0.11",

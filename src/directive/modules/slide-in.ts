@@ -1,6 +1,6 @@
 import type { DirectiveBinding } from 'vue'
 // 距离视口底部的距离
-const DISTANCE = 200
+const DEFAULT_DISTANCE = 200
 // 动画持续时间
 const DURATION = 1000
 // 动画集合
@@ -13,7 +13,7 @@ const animationMap = new WeakMap() //不使用map避免内存泄漏
 const ob = new IntersectionObserver((entries) => {
   for (const entry of entries) {
     // 判断目标元素是出现在上视口还是下视口  可重复触发
-    if (entry.boundingClientRect.top > entry.rootBounds!.top) {
+    if (entry.boundingClientRect.top > (entry.rootBounds?.top ?? 0)) {
       // 找出这个元素对应的动画
       const animation = animationMap.get(entry.target)
       if (animation) {
@@ -39,12 +39,13 @@ function isBelowViewport(el: HTMLElement) {
 export default {
   //可自定义动画持续时间
   mounted(el: HTMLElement, binding: DirectiveBinding) {
+    // 判断元素是否在视口下方
     if (!isBelowViewport(el)) return
-
+    // 创建动画
     const animation = el.animate(
       [
         {
-          transform: `translateY(${DISTANCE}px)`,
+          transform: `translateY(${DEFAULT_DISTANCE}px)`,
           opacity: 0,
         },
         {
@@ -57,8 +58,11 @@ export default {
         easing: 'ease',
       },
     )
+    // 暂停动画
     animation.pause()
+    // 添加动画集合
     animationMap.set(el, animation)
+    // 监听元素是否进入视口
     ob.observe(el)
   },
   unmounted(el: HTMLElement) {
