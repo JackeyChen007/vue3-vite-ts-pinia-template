@@ -19,6 +19,18 @@ const Layout: RouteRecordRaw = {
   children: routeModuleList,
 }
 
+const CustomLayout: RouteRecordRaw = {
+  path: '/custom',
+  component: () => import('@/layouts/custom.vue'),
+  children: [
+    {
+      path: '/about',
+      name: 'about',
+      component: () => import('@/views/about/index.vue'),
+    },
+  ],
+}
+
 // Basic routing without permission
 // 未经许可的基本路由
-export const basicRoutes = [Layout, PAGE_NOT_FOUND_ROUTE]
+export const basicRoutes = [Layout, CustomLayout, PAGE_NOT_FOUND_ROUTE]

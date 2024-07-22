@@ -13,6 +13,25 @@
   padding: unset;
   font-weight: normal;
 }
+a:focus,
+a:active {
+  outline: none;
+}
+
+a,
+a:focus,
+a:hover {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+a::selection {
+  background-color: gray;
+}
+
+ul {
+  list-style-type: none;
+}
 
 html,
 body,

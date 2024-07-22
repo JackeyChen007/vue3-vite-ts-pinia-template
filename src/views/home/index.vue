@@ -11,7 +11,7 @@ const store = inject('store') as any
 </script>
 
 <template>
-  <div>
+  <div h-1000>
     <SvgIcon name="baidu" color="black" size="100"></SvgIcon>
 
     {{ counterNumber }}
