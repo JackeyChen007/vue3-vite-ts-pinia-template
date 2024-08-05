@@ -46,7 +46,7 @@ export default defineConfig(({ mode }) => {
       preprocessorOptions: {
         scss: {
           // 引入 index.scss 这样就可以在全局中使用 index.scss中预定义的变量了
-          additionalData: '@import "@/styles/app-theme.scss";',
+          additionalData: '@import "@/styles/app-theme.scss";@import "@/styles/mixin.scss";@import "@/styles/variables.module.scss";',
         },
       },
     },

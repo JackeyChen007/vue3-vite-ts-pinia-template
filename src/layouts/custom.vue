@@ -18,29 +18,10 @@
 
   main {
     flex: 1;
+    width: calc(100% - 5px);
   }
 
-  overflow: scroll;
-  &::-webkit-scrollbar {
-    display: block;
-    width: 5px;
-    height: 5px;
-  }
-  // 滚动条轨道
-  &::-webkit-scrollbar-track {
-    background: transparent;
-    // border-radius: 5px;
-  }
-  // 滚动条滑块
-  &::-webkit-scrollbar-thumb {
-    background: rgb(56, 54, 55);
-    // border-radius: 5px;
-  }
-  // 滚动条滑块hover
-  &::-webkit-scrollbar-thumb:hover {
-    background: #252324;
-    cursor: pointer;
-  }
+  overflow: auto;
+  @include scrollBar;
 }
-
 </style>

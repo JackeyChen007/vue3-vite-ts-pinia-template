@@ -5,6 +5,7 @@ const app = createApp(App)
 
 //****** ↓↓↓ 全局样式 ↓↓↓ ******
 import './styles/index.scss'
+import 'animate.css'
 
 //****** ↓↓↓ 注册svg脚本 ↓↓↓ ******
 import 'virtual:svg-icons-register'

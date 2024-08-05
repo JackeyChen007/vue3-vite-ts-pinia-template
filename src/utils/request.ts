@@ -5,8 +5,8 @@ import store from '@/store'
 
 // 创建axios实例
 const service = axios.create({
-  baseURL: import.meta.env.VITE_APP_BASE_API,
-  timeout: 50000, // 请求超时时间：50s
+  baseURL: import.meta.env.VITE_APP_BASE_API + import.meta.env.VITE_APP_PATH_API,
+  timeout: 10000, // 请求超时时间：10s
   headers: { 'Content-Type': 'application/json;charset=utf-8' },
 })
 

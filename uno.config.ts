@@ -32,13 +32,13 @@ export default defineConfig({
     // 支持css排版
     presetTypography(),
     // 支持css字体
-    presetWebFonts({
-      provider: 'google',
-      fonts: {
-        sans: 'Roboto',
-        noto: 'Noto Sans SC:100,200,300,400,500,600,700,800,900', // 添加所有需要的字重
-      },
-    }),
+    // presetWebFonts({
+    //   provider: 'google',
+    //   fonts: {
+    //     sans: 'Roboto',
+    //     noto: 'Noto Sans SC:100,200,300,400,500,600,700,800,900', // 添加所有需要的字重
+    //   },
+    // }),
   ],
 
   transformers: [transformerDirectives(), transformerVariantGroup()],

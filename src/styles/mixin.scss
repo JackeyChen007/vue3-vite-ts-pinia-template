@@ -7,17 +7,26 @@
 }
 
 @mixin scrollBar {
-  &::-webkit-scrollbar-track-piece {
-    background: #d3dce6;
-  }
-
+  overflow: auto;
   &::-webkit-scrollbar {
-    width: 6px;
+    display: block;
+    width: $scrollBarWidth;
+    height: $scrollBarWidth;
   }
-
+  // 滚动条轨道
+  &::-webkit-scrollbar-track {
+    background: transparent;
+    // border-radius: 5px;
+  }
+  // 滚动条滑块
   &::-webkit-scrollbar-thumb {
-    background: #99a9bf;
-    border-radius: 20px;
+    background: rgb(56, 54, 55);
+    // border-radius: 5px;
+  }
+  // 滚动条滑块hover
+  &::-webkit-scrollbar-thumb:hover {
+    background: #252324;
+    cursor: pointer;
   }
 }
 

@@ -2,39 +2,31 @@
 
 <template>
   <header>
-    <div class="wrapper">
-      <nav class="text-8">
+    <div class="wrapper" p-4 bg-cyan flex justify-between items-center>
+      <nav text-8>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About </RouterLink>
+        <RouterLink to="/text">text </RouterLink>
         <RouterLink to="/404">404</RouterLink>
       </nav>
+      <AppCheckbox>
+        <div class="navigation-menu">
+          <a href="#introduction">我们的使命</a>
+          <a href="#area">覆盖地区</a>
+          <a href="#specification">使用指南</a>
+          <a href="#problem">常见问题</a>
+        </div>
+      </AppCheckbox>
     </div>
   </header>
 </template>
 
 <style lang="scss" scoped>
 header {
-  line-height: 1.5;
-  max-height: 100vh;
-}
-
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
-
-nav {
-  width: 100%;
-  text-align: center;
-  margin-top: 2rem;
 }
 
 nav a.router-link-exact-active {
   color: $main;
-}
-
-nav a.router-link-exact-active:hover {
-  background-color: transparent;
 }
 
 nav a {
