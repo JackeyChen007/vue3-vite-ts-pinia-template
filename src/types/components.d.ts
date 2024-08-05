@@ -10,10 +10,12 @@ declare module 'vue' {
     AppCheckbox: typeof import('./../components/AppCheckbox/index.vue')['default']
     AppFooter: typeof import('./../components/AppFooter/index.vue')['default']
     AppHeader: typeof import('./../components/AppHeader/index.vue')['default']
-    Checkbox: typeof import('./../components/Checkbox/index.vue')['default']
     Marquee: typeof import('./../components/Marquee/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
     SvgIcon: typeof import('./../components/SvgIcon/index.vue')['default']
+    VanButton: typeof import('vant/es')['Button']
+    VanTabbar: typeof import('vant/es')['Tabbar']
+    VanTabbarItem: typeof import('vant/es')['TabbarItem']
   }
 }

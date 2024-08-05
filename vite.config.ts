@@ -53,8 +53,7 @@ export default defineConfig(({ mode }) => {
     server: {
       host: '0.0.0.0', // 局域网别人也可访问
       port: Number(env.VITE_APP_PORT), //访问端口
-      // 运行时自动打开浏览器
-      // open: true,
+      open: true, // 运行时自动打开浏览器
       // IP跨域前后端都可以配置,如果后端配置,则不需要再配置代理
       // proxy: {
       //   [env.VITE_APP_BASE_API]: {
